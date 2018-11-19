@@ -1,0 +1,35 @@
+# https://github.com/rubocop-hq/rubocop-rspec/issues/299#issuecomment-331035706
+require: rubocop-rspec
+
+inherit_gem:
+  fashion_police:
+    - .rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 2.3
+
+RSpec/FilePath:
+  Enabled: false
+
+FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Exclude:
+    - spec/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
