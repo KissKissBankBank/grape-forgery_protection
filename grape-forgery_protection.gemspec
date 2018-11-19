@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ['cyril.lepagnot@kisskissbankbank.com']
   s.homepage    = 'https://github.com/KissKissBankBank/grape-forgery_protection'
   s.summary     = 'Protect your Grape API from forgery attacks.'
-  s.description = 'Protect your Grape API from forgery attacks.'
+  s.description = 'Protect your Grape API from forgery attacks like Rails.'
   s.license     = 'MIT'
 
   s.files = Dir['{lib}/**/*',
@@ -19,20 +19,15 @@ Gem::Specification.new do |s|
                 'Rakefile',
                 'README.md']
 
-  s.add_dependency 'grape'
+  s.add_dependency 'grape', '~> 1.0'
 
   # Code quality checker
-  s.add_development_dependency 'fashion_police'
-
-  # Code review automation
-  s.add_development_dependency 'pronto'
-
-  # Rubocop Adapter for pronto
-  s.add_development_dependency 'pronto-rubocop'
+  s.add_development_dependency 'fashion_police', '~> 1'
 
   # Debugger
-  s.add_development_dependency 'pry'
-  s.add_development_dependency 'pry-byebug'
+  s.add_development_dependency 'pry', '~> 0.12'
+  s.add_development_dependency 'pry-byebug', '~> 3.6'
+
   # Specs
-  s.add_development_dependency 'test-unit' # required for ruby > 2.1
+  s.add_development_dependency 'test-unit', '~> 0' # required for ruby > 2.1
 end
