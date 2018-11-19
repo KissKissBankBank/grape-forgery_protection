@@ -15,13 +15,6 @@ RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
-# Engine
-APP_RAKEFILE = File.expand_path('spec/dummy/Rakefile', __dir__)
-load 'rails/tasks/engine.rake'
-
-# Bundler
-Bundler::GemHelper.install_tasks
-
 # Rubocop
 require 'rubocop/rake_task'
 RuboCop::RakeTask.new
@@ -30,6 +23,11 @@ RuboCop::RakeTask.new
 require 'rspec/core'
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec)
+
+require 'bundler/gem_helper'
+
+Bundler::GemHelper.install_tasks
+require_relative 'lib/grape/forgery_protection/version'
 
 desc "Commit, create tag v#{Grape::ForgeryProtection::VERSION}, " \
      'build and push (make sure you update version.rb and CHANGELOG.md ' \
