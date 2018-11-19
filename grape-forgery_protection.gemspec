@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
                 'Rakefile',
                 'README.md']
 
-  s.add_dependency 'grape', '~> 1.0'
+  s.add_dependency 'grape', '~> 0.7'
 
   # Code quality checker
   s.add_development_dependency 'fashion_police', '~> 1'
