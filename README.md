@@ -23,3 +23,7 @@ $ rake grape-forgery_protection_release
 ```
 
 Finally, upload the new `pkg/grape-forgery_protection-*.gem` file to rubygems.
+
+## Thanks
+
+Thanks to @jandudulski for [its gist](https://gist.github.com/jandudulski/f3799ca67b7b08ded0c6)
