@@ -13,7 +13,7 @@ gem 'grape-forgery_protection'
 ## Release
 
 To release a new version, update the `CHANGELOG.md` and change the version
-number in `lib/sporran/version.rb`.
+number in `lib/grape/forgery_protection/version.rb`.
 
 Then, the following command will add these two files, commit, tag with the
 version and push to github:
