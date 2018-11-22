@@ -1,15 +1,9 @@
-# https://github.com/rubocop-hq/rubocop-rspec/issues/299#issuecomment-331035706
-require: rubocop-rspec
-
 inherit_gem:
   fashion_police:
     - .rubocop.yml
 
 AllCops:
   TargetRubyVersion: 2.3
-
-RSpec/FilePath:
-  Enabled: false
 
 FrozenStringLiteralComment:
   Enabled: false
